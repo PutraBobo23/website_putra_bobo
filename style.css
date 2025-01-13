@@ -1,0 +1,225 @@
+/* Universal selector for box-sizing and resetting margins/padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: Verdana, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(70, 64, 50) url('your-image-.jpg') center/cover no-repeat;
+    color: #f2f2f2;
+}
+
+/* Slideshow slide styling */
+.mySlides {
+    display: none;
+    height: 60vh;
+    overflow: hidden;
+    border: 3px solid white;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* Image styling */
+img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Slideshow container styling */
+.slideshow-container {
+    max-width: 100%; /* Ubah dari 500px menjadi 100% agar lebar penuh */
+    margin: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* Navigation buttons styling */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+/* Caption text styling */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Number text styling */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Dots/indicators styling */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+/* Responsive text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px;
+    }
+}
+
+/* Container styling */
+.container {
+    padding: 50px 0;
+    width: 1000px;
+    min-height: 100vh;
+}
+
+/* Box styling */
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Box button styling */
+.box-button {
+    flex-basis: 30%;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.box-button button {
+    border: none;
+    outline: none;
+    width: 200px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.box-button button:hover {
+    background-color: #444;
+}
+
+.box-button button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Box data styling */
+.box-data {
+    flex-basis: 67%;
+    background-color: #2a2a2a;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.title{
+    font-size: 2em;
+    font-weight: 600;
+   
+}
+.box-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 100%; /* Pastikan gambar tidak melampaui lebar kontainer */
+    height: auto; /* Menyesuaikan tinggi gambar */
+}
+
+.image-container {
+    width: 500%; /* Atur lebar kontainer */
+    height: 200; /* Atur tinggi secara otomatis */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.image-container-family {
+    width: 500%; /* Atur lebar kontainer */
+    height: 200; /* Atur tinggi secara otomatis */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+

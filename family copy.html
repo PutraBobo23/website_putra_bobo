@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <img src="images/welcome.jpg.webp" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="images/kuda sumba.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="images/pexels-francesco-ungaro-2325447.jpg" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a> 
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div class="box">
+          <div class="box-button">
+            <button><a href="./home.html">Home</a></button>
+            <button><a href="./about.html">About</a></button>
+            <button><a href="./education.html">Education</a></button>
+            <button><a href="./family.html">Family</a></button>
+          </div>
+          <div class="box-data">
+            
+          </div>
+        </div>
+ 
+  </div>
+
+
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length } for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; } for (i = 0;
+        i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+      slides[slideIndex - 1].style.display = "block"; dots[slideIndex - 1].className += " active";
+    } 
+  </script>
+</body>
+
+</html>

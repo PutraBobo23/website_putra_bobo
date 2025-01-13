@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="images/welcome_2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/kuda sumba.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/pexels-francesco-ungaro-2325447.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a> 
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div class="box">
+      <div class="box-button">
+        <button><a href="./home.html">Home</a></button>
+        <button><a href="./about.html">About</a></button>
+        <button><a href="./education.html">Education</a></button>
+        <button><a href="./family.html">Family</a></button>
+      </div>
+      <div class="box-data">
+        <div class="extra-column">
+          <div class="image-container">
+          
+            <img src="images/Gambar_education.jpg">
+            
+      </div>
+    </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+</body>
+
+</html>
